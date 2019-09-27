@@ -3,13 +3,13 @@ from pymongo import MongoClient
 from bson.objectid import ObjectId
 import os
 
-host = os.getenv('MONGODB_URI', 'mongodb://heroku_s0bs2nb7:m2ucv4lsr2vi0mb3um96rmerpv@ds033143.mlab.com:33143/heroku_s0bs2nb7')
+host = os.getenv('MONGODB_URI', 'mongodb://localhost:27017/foobar')
 # client = MongoClient(host=host)
 client = MongoClient(host=f'{host}?retryWrites=false')
 db = client.get_default_database()
 playlists = db.playlists
 
-client = MongoClient()
+# client = MongoClient()
 db = client.Playlister
 playlists = db.playlists
 
