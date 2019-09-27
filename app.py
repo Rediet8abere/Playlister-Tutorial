@@ -78,4 +78,6 @@ def playlists_delete(playlist_id):
 
 
 if __name__ == '__main__':
+  port = os.getenv('PORT', 5000)
+  print(f'Running on port {port}')
   app.run(debug=True, host='0.0.0.0', port=os.getenv('PORT', 5000))
